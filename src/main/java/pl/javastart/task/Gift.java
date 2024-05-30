@@ -1,12 +1,18 @@
 package pl.javastart.task;
 
+import java.util.Scanner;
+
 public class Gift extends Ticket {
 
-    static Ticket createGiftTicket(String event, String address, double price) {
+    static Ticket createGiftTicket() {
+        Scanner s = new Scanner(System.in);
         Gift gift = new Gift();
-        gift.setEvent(event);
-        gift.setAddress(address);
-        gift.setPrice(price);
+        System.out.println("Podaj nazwę wydarzenia: ");
+        gift.setEvent(s.nextLine());
+        System.out.println("Podaj miejsce wydarzenia: ");
+        gift.setAddress(s.nextLine());
+        System.out.println("Podaj cenę biletu");
+        gift.setPrice(s.nextDouble());
         return gift;
     }
 

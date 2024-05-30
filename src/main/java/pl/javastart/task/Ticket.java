@@ -41,17 +41,5 @@ public class Ticket {
         this.discount = discount;
     }
 
-    // Metoda, która stworzy tablicę i przyjmie stworzone bilety.
-//    public Bilet[][] createBilet(String event, String address, double price) {
-//        Bilet[][] bilets = new Bilet[][]{};
-//        for (int i = 0; i < bilets.length; i++) {
-//            for (int j = 0; j < ; j++) {
-//
-//            }
-//        }
-//        bilets[i][j] = new Bilet(getEvent(), getAddress(), getPrice());
-//
-//        return new Bilet[0][];
-//    }
 }
 

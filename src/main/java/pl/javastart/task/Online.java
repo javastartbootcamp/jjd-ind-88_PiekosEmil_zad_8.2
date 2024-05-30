@@ -1,12 +1,19 @@
 package pl.javastart.task;
 
+import java.util.Scanner;
+
 public class Online extends Ticket {
 
-    static Ticket createOnlineTicket(String event, String address, double price) {
+    static Ticket createOnlineTicket() {
+        Scanner scanner = new Scanner(System.in);
+
         Online online = new Online();
-        online.setEvent(event);
-        online.setAddress(address);
-        online.setPrice(price);
+        System.out.println("Podaj nazwę wydarzenia: ");
+        online.setEvent(scanner.nextLine());
+        System.out.println("Podaj miejsze wydarzenia");
+        online.setAddress(scanner.nextLine());
+        System.out.println("Podaj cenę biletu: ");
+        online.setPrice(scanner.nextDouble());
         return online;
     }
 

@@ -5,9 +5,9 @@ public class Main {
     public static void main(String[] args) {
         Ticket[][] tickets = new Ticket[2025][4];
 
-        Ticket online = Online.createOnlineTicket("SDM", "Szczecin", 100);
-        Ticket standard = Standard.createStandardTicket("Open'er", "Warszawa", 200);
-        Ticket gift = Gift.createGiftTicket("StandUP", "Katowice", 150);
+        Ticket online = Online.createOnlineTicket();
+        Ticket standard = Standard.createStandardTicket();
+        Ticket gift = Gift.createGiftTicket();
 
         tickets[2024][1] = online;
         tickets[2024][2] = standard;
