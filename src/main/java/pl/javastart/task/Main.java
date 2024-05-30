@@ -3,40 +3,29 @@ package pl.javastart.task;
 public class Main {
 
     public static void main(String[] args) {
-        Bilet[][] bilets = new Bilet[2025][4];
+        Ticket[][] tickets = new Ticket[2025][4];
 
-        Online online = new Online();
-        online.setEvent("SDM");
-        online.setAddress("Warszawa");
-        online.setPrice(100);
+        Ticket online = Online.createOnlineTicket("SDM", "Szczecin", 100);
+        Ticket standard = Standard.createStandardTicket("Open'er", "Warszawa", 200);
+        Ticket gift = Gift.createGiftTicket("StandUP", "Katowice", 150);
 
-        Standard standard = new Standard();
-        standard.setEvent("SDM");
-        standard.setAddress("Warszawa");
-        standard.setPrice(100);
-
-        Gift gift = new Gift();
-        gift.setEvent("SDM");
-        gift.setAddress("Warszawa");
-        gift.setPrice(100);
-
-        bilets[2024][1] = online;
-        bilets[2024][2] = standard;
-        bilets[2024][3] = gift;
+        tickets[2024][1] = online;
+        tickets[2024][2] = standard;
+        tickets[2024][3] = gift;
 
         System.out.println("Events bilets: " + "\n");
 
-        for (int i = 2024; i <= bilets.length; i++) {
-            for (int j = 1; j <= bilets[i].length; j++) {
+        for (int i = 2024; i <= tickets.length; i++) {
+            for (int j = 1; j <= tickets[i].length; j++) {
 
-                if (j >= bilets[i].length) {
+                if (j >= tickets[i].length) {
                     return;
                 }
 
                 System.out.println("ID: " + i + "/" + j
-                        + "\nEvent: " + bilets[i][j].getEvent()
-                        + "\nAddress: " + bilets[i][j].getAddress()
-                        + "\nPrice: " + bilets[i][j].getPrice()
+                        + "\nEvent: " + tickets[i][j].getEvent()
+                        + "\nAddress: " + tickets[i][j].getAddress()
+                        + "\nPrice: " + tickets[i][j].getPrice()
                         + "\n~~~~~~~~~~~~~~~~");
             }
         }

@@ -1,12 +1,12 @@
 package pl.javastart.task;
 
-public class Bilet {
+public class Ticket {
     private String event; // Nazwa wydarzenia, na które ten bilet jest przeznaczony
     private String address; // Miejsce, w którym się odbywa
     private double price; // Cena podstawowa
     private int discount; // Zniżka wyrażona jako wartość z przedziału 0-1
 
-    public Bilet() {
+    public Ticket() {
     }
 
     public String getEvent() {
