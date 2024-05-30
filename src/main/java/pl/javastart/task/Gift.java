@@ -1,9 +1,6 @@
 package pl.javastart.task;
 
 public class Gift extends Bilet {
-    Gift(String event, String address, double price) {
-        super(event, address, price);
-    }
 
     @Override
     public double getPrice() {
